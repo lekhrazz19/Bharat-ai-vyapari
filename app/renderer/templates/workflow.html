@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../styles/proposal.css" />
+</head>
+<body>
+<section class="page">
+  <header class="header">
+    <div class="section-label">{{ service.serviceSectionLabel }}</div>
+    <img class="logo" src="../../../assets/bav-logo.png" />
+  </header>
+
+  <main class="content">
+    <h1 class="workflow-title">{{ service.workflowTitle }}</h1>
+
+    {% set steps = [
+      [service.step1Title, service.step1Description, [service.step1Bullet1, service.step1Bullet2, service.step1Bullet3]],
+      [service.step2Title, service.step2Description, [service.step2Bullet1, service.step2Bullet2, service.step2Bullet3, service.step2Bullet4]],
+      [service.step3Title, service.step3Description, [service.step3Bullet1, service.step3Bullet2, service.step3Bullet3]],
+      [service.step4Title, service.step4Description, [service.step4Bullet1, service.step4Bullet2, service.step4Bullet3]],
+      [service.step5Title, service.step5Description, [service.step5Bullet1, service.step5Bullet2, service.step5Bullet3, service.step5Bullet4]]
+    ] %}
+    {% for s in steps %}
+    <div class="workflow-stage s{{ loop.index }}">
+      <div class="stage-head">{{ s[0] }}</div>
+      <div class="stage-body">
+        <p>{{ s[1] }}</p>
+        <ul>
+          {% for bullet in s[2] %}{% if bullet %}<li>{{ bullet }}</li>{% endif %}{% endfor %}
+        </ul>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="arrow a1">→</div>
+    <div class="arrow a2">→</div>
+    <div class="arrow a3">→</div>
+    <div class="arrow a4">→</div>
+  </main>
+
+  <footer class="footer">
+    <span>BHARAT AI VYAPARI</span>
+    <span>{{ '%02d'|format(pageNumber) }}</span>
+  </footer>
+</section>
+</body>
+</html>

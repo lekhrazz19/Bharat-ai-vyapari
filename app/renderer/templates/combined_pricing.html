@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../styles/proposal.css" />
+</head>
+<body>
+<section class="page">
+  <header class="header">
+    <div class="section-label">PRICING & NEXT STEPS</div>
+    <img class="logo" src="../../../assets/bav-logo.png" />
+  </header>
+
+  <main class="content">
+    <h1>Combined Pricing / Next Steps</h1>
+    <p>Prepared for {{ proposalMeta.clientCompanyName }}.</p>
+
+    <div class="pricing-card">
+      <h2>{{ combinedPricing.pricingPlan }}</h2>
+      <div class="price-row">
+        <div class="price-box">
+          <div class="price-label">One-Time Setup</div>
+          <div class="price-value">{{ combinedPricing.setupCostTotal }}</div>
+        </div>
+        <div class="price-box">
+          <div class="price-label">Monthly Retainer</div>
+          <div class="price-value">{{ combinedPricing.monthlyCostTotal }}</div>
+        </div>
+      </div>
+      <p><strong>Timeline:</strong> {{ combinedPricing.timeline }}</p>
+      <h2>Included Services</h2>
+      <ul class="service-list">
+        {% for item in combinedPricing.includedServices %}<li>{{ item }}</li>{% endfor %}
+      </ul>
+      <div class="next-step">{{ combinedPricing.nextStep }}</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>BHARAT AI VYAPARI</span>
+    <span>{{ '%02d'|format(pageNumber) }}</span>
+  </footer>
+</section>
+</body>
+</html>

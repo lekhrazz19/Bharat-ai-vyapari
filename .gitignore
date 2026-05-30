@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.env
+storage/html/*
+storage/pdf/*
+storage/temp/*
+storage/logs/*
+!.gitkeep
+.venv/
+venv/
+.playwright-browsers/
+.DS_Store

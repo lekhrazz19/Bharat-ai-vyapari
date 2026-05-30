@@ -1,0 +1,97 @@
+:root {
+  --green: #136B2A;
+  --dark-green: #0F5A25;
+  --soft-green: #9FC8A8;
+  --pale-green: #F4FAF5;
+  --orange: #F15A24;
+  --blue: #1E5A91;
+  --text: #12612A;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: white;
+}
+.page {
+  width: 768px;
+  height: 1086px;
+  position: relative;
+  background: #fff;
+  overflow: hidden;
+  padding: 64px 70px 70px;
+}
+.page.cover { padding: 0; }
+.cover-img { width: 768px; height: 1086px; object-fit: cover; display: block; }
+.header {
+  position: absolute;
+  top: 54px;
+  left: 64px;
+  right: 64px;
+  height: 54px;
+  border-bottom: 2px solid var(--green);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.section-label {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--dark-green);
+}
+.logo { height: 42px; object-fit: contain; }
+.content { position: absolute; top: 145px; left: 74px; right: 74px; bottom: 86px; }
+h1 { margin: 0 0 20px; color: var(--green); font-size: 34px; line-height: 1.06; font-weight: 800; }
+h2 { margin: 20px 0 12px; color: var(--green); font-size: 18px; line-height: 1.15; font-weight: 800; }
+p { font-size: 17px; line-height: 1.38; margin: 0 0 14px; }
+.tagline { font-size: 18px; margin-bottom: 28px; }
+.footer {
+  position: absolute; left: 74px; right: 74px; bottom: 38px;
+  border-top: 2px solid var(--green);
+  padding-top: 13px;
+  font-size: 12px; letter-spacing: .7px;
+  color: var(--dark-green);
+  display: flex; justify-content: space-between;
+}
+.industry-grid {
+  display: grid; grid-template-columns: repeat(6, 1fr); gap: 30px 22px; margin: 30px 0 38px;
+}
+.industry { text-align: center; font-size: 9px; line-height: 1.25; text-transform: uppercase; color: var(--dark-green); font-weight: 700; min-height: 78px; overflow: hidden; }
+.industry img { width: 38px; height: 38px; object-fit: contain; margin-bottom: 8px; opacity: .95; }
+.workflow-title { margin-top: 0; font-size: 35px; }
+.workflow-stage { position: absolute; width: 205px; border: 1.5px solid var(--soft-green); border-radius: 8px; overflow: hidden; background: #fff; }
+.stage-head { background: var(--green); color: #fff; padding: 14px 15px; font-size: 14px; font-weight: 800; }
+.stage-body { padding: 14px 15px; height: 126px; font-size: 12px; line-height: 1.35; overflow: hidden; }
+.stage-body p { font-size: 12px; line-height: 1.35; margin-bottom: 8px; }
+ul { margin: 6px 0 0 16px; padding: 0; }
+li { margin-bottom: 2px; }
+.s1 { left: 0; top: 95px; }
+.s2 { right: 30px; top: 95px; }
+.s3 { right: 52px; top: 360px; }
+.s4 { left: 18px; top: 430px; }
+.s5 { left: 270px; top: 665px; }
+.arrow { position: absolute; color: var(--green); font-size: 54px; line-height: 1; opacity: .75; }
+.a1 { left: 230px; top: 198px; }
+.a2 { right: 120px; top: 292px; transform: rotate(90deg); }
+.a3 { left: 235px; top: 482px; transform: rotate(180deg); }
+.a4 { left: 145px; top: 675px; transform: rotate(45deg); }
+.benefits-title { font-size: 34px; margin-bottom: 28px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.25; }
+th { background: var(--green); color: #fff; text-align: left; padding: 14px 12px; font-weight: 800; }
+td { border: 1px solid var(--soft-green); padding: 12px; height: 52px; vertical-align: top; overflow: hidden; }
+.pas-title { font-size: 31px; margin-top: 42px; }
+.pas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 26px; }
+.pas-card { border: 1.5px solid var(--soft-green); border-radius: 8px; min-height: 160px; padding: 18px; overflow: hidden; }
+.pas-card h3 { color: var(--green); font-size: 13px; margin: 0 0 12px; font-weight: 800; }
+.pas-card p { font-size: 12px; line-height: 1.35; margin: 0; }
+.pricing-card { border: 2px solid var(--green); border-radius: 14px; padding: 28px; background: var(--pale-green); margin-top: 32px; }
+.price-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 22px 0; }
+.price-box { background: #fff; border: 1px solid var(--soft-green); border-radius: 10px; padding: 18px; }
+.price-label { font-size: 12px; text-transform: uppercase; letter-spacing: .8px; color: var(--dark-green); }
+.price-value { font-size: 28px; color: var(--green); font-weight: 800; margin-top: 8px; }
+.service-list { margin-top: 18px; font-size: 16px; }
+.service-list li { margin-bottom: 8px; }
+.next-step { margin-top: 24px; padding: 16px; background: var(--green); color: white; border-radius: 10px; font-weight: 700; }

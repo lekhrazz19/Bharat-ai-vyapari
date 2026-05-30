@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../styles/proposal.css" />
+</head>
+<body>
+<section class="page">
+  <header class="header">
+    <div class="section-label">{{ service.serviceSectionLabel }}</div>
+    <img class="logo" src="../../../assets/bav-logo.png" />
+  </header>
+
+  <main class="content">
+    <h1>{{ service.serviceName }}</h1>
+    <p class="tagline">{{ service.serviceTagline }}</p>
+
+    <h2>{{ service.whoItsForTitle }}</h2>
+    <p>{{ service.whoItsForDescription }}</p>
+
+    <div class="industry-grid">
+      {% for i in range(1, 13) %}
+      <div class="industry">
+        <img src="../../../assets/icons/default.png" />
+        <div>{{ service['industry' ~ i] }}</div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <h2>{{ service.useCaseTitle }}</h2>
+    <p>{{ service.useCaseSummary }}</p>
+
+    <h2>{{ service.resultTitle }}:</h2>
+    <p>{{ service.resultStatement }}</p>
+  </main>
+
+  <footer class="footer">
+    <span>BHARAT AI VYAPARI</span>
+    <span>{{ '%02d'|format(pageNumber) }}</span>
+  </footer>
+</section>
+</body>
+</html>

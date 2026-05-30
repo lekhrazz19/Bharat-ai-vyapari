@@ -1,0 +1,12 @@
+{
+  "company_name": "Nirav Tools",
+  "company_website": "https://example.com",
+  "client_name": "Mahendra G",
+  "client_email": "sales@example.com",
+  "selected_services": ["AI SDR / Lead Generation Automation", "WhatsApp Automate"],
+  "pricing_mode": "Manual",
+  "pricing_plan": "Growth",
+  "manual_setup_cost": "₹75000",
+  "manual_monthly_cost": "₹25000",
+  "sales_note": "Met at expo. Wants B2B leads from manufacturers."
+}

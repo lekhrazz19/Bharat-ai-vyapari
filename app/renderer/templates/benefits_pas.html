@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../styles/proposal.css" />
+</head>
+<body>
+<section class="page">
+  <header class="header">
+    <div class="section-label">{{ service.serviceSectionLabel }}</div>
+    <img class="logo" src="../../../assets/bav-logo.png" />
+  </header>
+
+  <main class="content">
+    <h1 class="benefits-title">{{ service.benefitsTitle }}</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>{{ service.outcomeHeader }}</th>
+          <th>{{ service.beforeHeader }}</th>
+          <th>{{ service.afterHeader }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in range(1, 7) %}
+        <tr>
+          <td>{{ service['outcome' ~ i] }}</td>
+          <td>{{ service['before' ~ i] }}</td>
+          <td>{{ service['after' ~ i] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <h1 class="pas-title">{{ service.pasTitle }}</h1>
+    <div class="pas-grid">
+      <div class="pas-card"><h3>{{ service.problemTitle }}</h3><p>{{ service.problemText }}</p></div>
+      <div class="pas-card"><h3>{{ service.agitationTitle }}</h3><p>{{ service.agitationText }}</p></div>
+      <div class="pas-card"><h3>{{ service.solutionTitle }}</h3><p>{{ service.solutionText }}</p></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <span>BHARAT AI VYAPARI</span>
+    <span>{{ '%02d'|format(pageNumber) }}</span>
+  </footer>
+</section>
+</body>
+</html>
